@@ -23,7 +23,7 @@ function updateCountdown() {
   
   // Fancy cron
   browser.alarms.create("updateCountdown", {
-    // We are telling the overzealious cron job to hold the fuck up for updateInterval minutes
+    // We are telling the overzealous cron job to hold the fuck up for updateInterval minutes
     delayInMinutes: updateInterval
 
   // Close brakets
