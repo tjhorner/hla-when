@@ -6,13 +6,13 @@ function updateCountdown() {
   const days = Math.ceil((hlaRelease.getTime() - now.getTime()) / (1000*60*60*24))
 
   let text = days <= 0 ? "0d" : `${days}d`
-  chrome.browserAction.setBadgeText({ text })
+  browser.browserAction.setBadgeText({ text })
 
-  chrome.alarms.create("updateCountdown", {
+  browser.alarms.create("updateCountdown", {
     delayInMinutes: updateInterval
   })
 }
 
-chrome.alarms.onAlarm.addListener(updateCountdown)
+browser.alarms.onAlarm.addListener(updateCountdown)
 
 updateCountdown()
