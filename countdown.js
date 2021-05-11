@@ -13,7 +13,7 @@ function updateCountdown() {
   // This is a the constant variable days
   const days = Math.ceil((hlaRelease.getTime() - now.getTime()) / (1000*60*60*24))
                          
-  // Creating a new variable days. It is very important
+  // Doing stuff to variable days. It is very important
   let text = days <= 0 ? "0d" : `${days}d`
 
   // We are setting the badge text for the browserAction in the browser class
